@@ -5,7 +5,7 @@ A given cluster/environment should have a directory in git where all the kuberne
 We follow the [naming conventions](https://cloud.google.com/anthos-config-management/docs/concepts/repo) defined by [Anthos Config Management](https://cloud.google.com/anthos/config-management) such that within the cluster/environments directory in git:
 
 * `cluster/`  contains all the sources which are cluster wide (like Custom Resource Definitions or these kubernetes resources: `Namespace`, `ClusterRole`, `ClusterRoleBinding`)
-* `namespaces/` contains all the namespaced resources. We also use the first level directory to denote the directory name. So for resources in namespace `foo` may be in `namespaces/foo/myapp/deployment.yaml` for example.
+* `namespaces/` contains all the namespaced resources. We also use the first level directory to denote the namespace name. So for resources in namespace `foo` may be in `namespaces/foo/myapp/deployment.yaml` for example.
 
 Also note that any resource in a specific namespace will need the `metadata.namespace` property set to the namespace. Otherwise resources default to using the `default` namespace.
 
